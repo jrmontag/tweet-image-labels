@@ -1,0 +1,23 @@
+# set up the commented-out pieces before "pip install"ing from this file 
+#   and consider checking for a newer tensorflow binary!
+#
+# $ mkvirtualenv -p /opt/bin/python3.5 img-cap
+# $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp35-cp35m-linux_x86_64.whl
+# $ pip install -r requirements.txt 
+
+numpy
+scipy
+pandas
+
+jupyter
+h5py
+requests
+Pillow
+pymysql
+
+scikit-learn
+keras
+tensorflow
+
+matplotlib
+seaborn
