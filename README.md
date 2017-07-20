@@ -74,11 +74,15 @@ $ nohup nice mysql -u root image_labels < db/export_results.sql > rdata/db-resul
 
 7. Analyze prediction results
 
-Using the exported tsv, we can run some analysis on our predictions to understand how the model performed. Again, since we're running this on a remote server, you'll need to forward a local port of your choosing to the remote host for the IPython notebook server. Assuming we update the filepath at the top of the notebook correctly, we can possibly just hit "Run All" and see what happens. A rendered version of the notebook from the original experiment [is here](https://gist.github.com/jrmontag/ad759915531c91a7becb9cfaaf66a15c). 
+Using the exported tsv, we can run some analysis on our predictions to understand how the model performed. Again, since we're running this on a remote server, you'll need to forward a local port of your choosing to the remote host for the IPython notebook server. Assuming we update the filepath at the top of the notebook correctly, we can possibly just hit "Run All" and see what happens. 
+
+The important figure is the ROC curve shown below, where this particular evaluation suggests a prediction probability threshold of 0.6 is a good choice. A rendered version of the notebook from the original experiment [is here](https://gist.github.com/jrmontag/ad759915531c91a7becb9cfaaf66a15c). 
 
 ```bash 
 (img) $ jupyter notebook --no-browser --port=<forwarded port>
 ```
+
+![VGG16 ROC curve](roc.png "VGG16 ROC curve") 
 
 
 8. Profit?  
